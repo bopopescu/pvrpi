@@ -46,7 +46,7 @@ def GetTemperature(no):
                 subprocess.call(['modprobe', 'w1-therm'])
                 
                 # Open the file that we viewed earlier so that python can see what is in it. Replace the serial number as before.
-                filename = "/sys/bus/w1/devices/"+globals.DallasSensorDirectory[no]+"/w1_slave"
+                filename = "/sys/bus/w1/devices/"+globals.DallasSensorDirectory[no]+"/w1_subordinate"
                 if (fileexists(filename)):
                         tfile = open(filename)
                 else:

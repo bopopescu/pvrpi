@@ -6,7 +6,7 @@ global pusherObj
 
 def read_file():
   while True:
-	tfile = open( "/sys/bus/w1/devices/10-0008006318b6/w1_slave")
+	tfile = open( "/sys/bus/w1/devices/10-0008006318b6/w1_subordinate")
 	text = tfile.read()
 	tfile.close()
 	secondline = text.split("\n")[1]

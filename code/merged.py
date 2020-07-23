@@ -26,7 +26,7 @@ headers = {"Connection": "keep-alive",
            "Accept": " application/json, text/javascript, */*; q=0.01",
            "Content-Type": " application/json",
            "Content-Length": " 1000",
-           "x-zumo-version": "Zumo.master.0.1.6.3890.Runtime",
+           "x-zumo-version": "Zumo.main.0.1.6.3890.Runtime",
            "X-ZUMO-APPLICATION": " bXRaOQFontMMZWcltoaajYAYZPRLfV95"}
 def channel_callback(data):
     a = str(data)
@@ -42,7 +42,7 @@ def connect_handler(data):
 
 def read_file():
   while True:
-	tfile = open( "/sys/bus/w1/devices/10-0008006318b6/w1_slave")
+	tfile = open( "/sys/bus/w1/devices/10-0008006318b6/w1_subordinate")
 	text = tfile.read()
 	tfile.close()
 	secondline = text.split("\n")[1]

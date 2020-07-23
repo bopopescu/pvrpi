@@ -1,4 +1,4 @@
-tfile = open( "/sys/bus/w1/devices/10-000800629cc5/w1_slave")
+tfile = open( "/sys/bus/w1/devices/10-000800629cc5/w1_subordinate")
 text = tfile.read()
 tfile.close()
 secondline = text.split("\n")[1]
